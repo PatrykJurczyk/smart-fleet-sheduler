@@ -1,3 +1,8 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+export default [
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./modules/dashboard/dashboard.routing'),
+  },
+] as Routes;

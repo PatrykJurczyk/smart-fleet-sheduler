@@ -1,0 +1,76 @@
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <button type="button" (click)="goHome()">
+      <img ngSrc="assets/images/partnera-logo.png" alt="Company logo" width="75" height="24" />
+    </button>
+  </div>
+
+  <nav class="main-nav">
+    @for (item of navigationItems; track item.id) {
+      <a
+        [routerLink]="item.route"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [class]="{ 'is-cta': item.isCta }"
+        class="nav-item"
+      >
+        <lucide-icon [name]="item.icon" [size]="20" /> <span>{{ item.label }}</span>
+      </a>
+    }
+  </nav>
+
+  <div class="nav-spacer">
+    <button
+      type="button"
+      (click)="isOpen = !isOpen"
+      cdkOverlayOrigin
+      #trigger="cdkOverlayOrigin"
+      class="user-button"
+    >
+      <div class="avatar">
+        <span>M</span>
+      </div>
+
+      <div class="user-info">
+        <p class="user-name">displayName</p>
+        <p class="user-surname">displayEmail</p>
+      </div>
+
+      <lucide-icon [name]="ChevronUp" [size]="16" />
+    </button>
+
+    <ng-template
+      cdkConnectedOverlay
+      [cdkConnectedOverlayOrigin]="trigger"
+      [cdkConnectedOverlayOpen]="isOpen"
+      (overlayOutsideClick)="isOpen = false"
+      (detach)="isOpen = false"
+      [cdkConnectedOverlayPositions]="[
+        { originX: 'start', originY: 'top', overlayX: 'start', overlayY: 'bottom', offsetY: -5 },
+      ]"
+    >
+      <div class="dropdown-content">
+        <div>
+          <lucide-icon [name]="Settings" [size]="16" />
+          <span>Ustawienia profilu</span>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="logout">
+          <lucide-icon [name]="LogOut" [size]="16" />
+          <span>Wyloguj się</span>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+  <footer class="sidebar-footer">
+    <img ngSrc="assets/images/partnera-logo.png" alt="Partnera" width="75" height="24" />
+
+    <div class="footer-info">
+      <p>© 2026 Partnera</p>
+      <p>Wszelkie prawa zastrzeżone</p>
+    </div>
+  </footer>
+</aside>
