@@ -3,7 +3,7 @@ import { CardHeaderComponent } from '../../../../global/card-header/card-header.
 
 @Component({
   imports: [CardHeaderComponent],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss',
+  templateUrl: './schedules.component.html',
+  styleUrl: './schedules.component.scss',
 })
-export class DashboardComponent {}
+export class SchedulesComponent {}
