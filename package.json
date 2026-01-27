@@ -1,16 +1,16 @@
 {
   "name": "smart-fleet-sheduler",
   "version": "0.0.0",
-  "homepage": "https://patrykjurczyk.github.io/smart-fleet-sheduler/",
+  "homepage": "https://patrykjurczyk.github.io/smart-fleet-sheduler",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /smart-fleet-sheduler/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "format": "prettier --write \"**/*.{ts,js,html,css,scss,json}\"",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist/smart-fleet-sheduler/browser"
   },
   "private": true,
   "packageManager": "npm@10.9.2",
