@@ -1,0 +1,43 @@
+<app-card [clickFn]="test">
+  <div class="card-title" card-title>
+    <lucide-icon [name]="CalendarDaysIcon" [size]="20" />
+    <h3>Aktualny grafik</h3>
+  </div>
+
+  <div class="card-content form-widget" card-content>
+    <div class="form-widget-date">12 sty - 18 sty 2026</div>
+
+    <div class="form-widget-stats">
+      @for (item of items; track item) {
+        <div class="stats">
+          <div class="stats-header">
+            <p class="label">Odpowiedzi</p>
+            <p class="value">1 / 6</p>
+          </div>
+          <div class="stats-content">
+            <div class="bar"></div>
+          </div>
+          <div class="stats-footer">
+            17% kierowców wypełniło
+          </div>
+        </div>
+      }
+    </div>
+
+
+    <div class="footer">
+      <div class="end-time-wrapper">
+        <lucide-icon [name]="ClockIcon" [size]="16" />
+        <div class="end-time">
+          <p class="label">Zakończona</p>
+          <p class="value">Termin: 23 sty 2026</p>
+        </div>
+      </div>
+
+      <button class="btn">
+        <lucide-icon [name]="EyeIcon" [size]="16" />
+        <span>Edytuj</span>
+      </button>
+    </div>
+  </div>
+</app-card>

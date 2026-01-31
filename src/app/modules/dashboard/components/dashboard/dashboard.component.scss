@@ -1,0 +1,80 @@
+.content {
+  gap: 1rem;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  height: 100%;
+  display: grid;
+  box-sizing: border-box;
+
+  .two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .card-content {
+    .ranking {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      &:not(:first-child) {
+        margin-top: 0.625rem;
+      }
+
+      &:nth-of-type(1) {
+        --rank-color: var(--gradient-dark);
+        --text-color: var(--color-white);
+      }
+
+      &:nth-of-type(2) {
+        --rank-color: #9ca3afff;
+        --text-color: var(--color-white);
+
+      }
+
+      &:nth-of-type(3) {
+        --rank-color: #b45309ff;
+        --text-color: var(--color-white);
+
+      }
+
+      .ranking-place {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: var(--radius-full);
+        background: var(--rank-color, var(--color-bg-muted));
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 500;
+        color: var(--text-color, var(--color-text-secondary));
+      }
+
+      .ranking-primary {
+        flex: 1 1 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+
+      .ranking-secondary {
+        color: var(--color-text-secondary);
+        font-size: 0.75rem;
+        line-height: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 4rem;
+      }
+
+      .ranking-tertiary {
+      }
+    }
+  }
+}

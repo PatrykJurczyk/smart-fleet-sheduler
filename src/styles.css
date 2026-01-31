@@ -1,3 +1,5 @@
+@import './styles/card.scss';
+
 :root {
   --color-white: #ffffff;
   --color-black: #000000;
@@ -29,4 +31,6 @@
     'Noto Color Emoji';
   font-feature-settings: normal;
   font-variation-settings: normal;
+  caret-color: transparent;
 }
+

@@ -1,0 +1,15 @@
+@if (emptyState()) {
+  <div class="card-empty">
+    <lucide-icon [name]="PlusIcon" [size]="24" />
+    <div class="empty-info">
+      <p class="empty-title">Wkrótce</p>
+      <p class="empty-subtitle">Miejsce na nowy widget</p>
+    </div>
+  </div>
+} @else {
+  <div class="card" [class.clickable]="!!clickFn()" (click)="onClick()">
+    <ng-content select="[card-title]" />
+    <ng-content select="[card-subtitle]" />
+    <ng-content select="[card-content]" />
+  </div>
+}

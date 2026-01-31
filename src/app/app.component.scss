@@ -7,15 +7,21 @@
   background: #f5f7fa;
 
   ::ng-deep ng-component {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 0;
-    padding: 1.5rem;
-    overflow: hidden;
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-base);
-    border: 1px solid var(--color-border-default);
-    border-radius: var(--radius-lg);
-    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+
+    > div:first-child {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 0;
+      height: 100%;
+
+      padding: 1.5rem;
+      overflow: hidden;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg-base);
+      border: 1px solid var(--color-border-default);
+      border-radius: var(--radius-lg);
+      transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 }

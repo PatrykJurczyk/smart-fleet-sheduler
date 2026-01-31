@@ -1,0 +1,57 @@
+<app-card [clickFn]="test">
+  <div card-title class="card-title">
+    <lucide-icon [name]="CalendarDaysIcon" [size]="20" />
+    <h3>Aktualny grafik</h3>
+  </div>
+
+  <div class="card-content schedule-widget" card-content>
+    <div class="schedule-widget-date">12 sty - 18 sty 2026</div>
+    <div class="schedule-widget-stats">
+      <div class="stats">
+        <div class="stats-item">
+          <lucide-icon [name]="CalendarDaysIcon" [size]="20" />
+          <div class="stats-info">
+            <p class="stats-value">32</p>
+            <p class="stats-label">Zmian</p>
+          </div>
+        </div>
+        <div class="stats-item">
+          <lucide-icon [name]="UsersIcon" [size]="20" />
+          <div class="stats-info">
+            <p class="stats-value">6</p>
+            <p class="stats-label">Kierowców</p>
+          </div>
+        </div>
+        <div class="stats-item">
+          <lucide-icon [name]="CarIcon" [size]="20" />
+          <div class="stats-info">
+            <p class="stats-value">3</p>
+            <p class="stats-label">Samochody</p>
+          </div>
+        </div>
+      </div>
+      <div class="stats grid-col-2">
+        <div class="stats-item">
+          <lucide-icon [name]="RouteIcon" [size]="20" />
+          <div class="stats-info">
+            <p class="stats-value">93</p>
+            <p class="stats-label">Km łącznie</p>
+          </div>
+        </div>
+        <div class="stats-item">
+          <lucide-icon [name]="ClockIcon" [size]="20" />
+          <div class="stats-info">
+            <p class="stats-value">4h 20m</p>
+            <p class="stats-label">Czas łącznie</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="btn">
+        <lucide-icon [name]="PencilIcon" [size]="20" />
+        <span>Edytuj</span>
+      </button>
+    </div>
+  </div>
+</app-card>
