@@ -7,6 +7,46 @@
   <div class="card-subtitle" card-subtitle>Ostatni grafik</div>
 
   <div class="card-content" card-content>
-    In progress
+    @if (tradingUp) {
+      <div class="stats-item trading-up">
+        <lucide-icon [name]="TrendingUpIcon" [size]="20" />
+        <div class="stats-data">
+          <p class="label">Wydajność zmian</p>
+          <p class="value">Brak danych</p>
+        </div>
+      </div>
+    } @else {
+      <div class="stats-item trading-down">
+        <lucide-icon [name]="TrendingDownIcon" [size]="20" />
+        <div class="stats-data">
+          <p class="label">Wydajność zmian</p>
+          <p class="value">Brak danych</p>
+        </div>
+      </div>
+    }
+
+    <div class="stats-item">
+      <lucide-icon [name]="CalendarIcon" [size]="20" />
+      <div class="stats-data">
+        <p class="label">Najwiecej zmian</p>
+        <p class="value">Sobota - 6</p>
+      </div>
+    </div>
+
+    <div class="stats-item">
+      <lucide-icon [name]="UsersIcon" [size]="20" />
+      <div class="stats-data">
+        <p class="label">Średnia zmian/kierowcę</p>
+        <p class="value">5.3</p>
+      </div>
+    </div>
+
+    <div class="stats-item">
+      <lucide-icon [name]="RefreshCwIcon" [size]="20" />
+      <div class="stats-data">
+        <p class="label">Bez wymiany kierowcy</p>
+        <p class="value">1</p>
+      </div>
+    </div>
   </div>
 </app-card>

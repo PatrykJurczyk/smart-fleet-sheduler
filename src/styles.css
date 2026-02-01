@@ -12,7 +12,9 @@
   --color-bg-base: #ffffff;
   --color-bg-muted: #f3f5f7;
   --color-bg-muted-alpha: #f3f5f7cc;
+  --color-bg-muted-beta: #F3F5F74C;
   --color-bg-hover-dark: #262626;
+  --color-bg-hover-light: #2626261A;
   --gradient-dark: linear-gradient(to right, #333333, #1a1a1a);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
   --radius-lg: 0.875rem;

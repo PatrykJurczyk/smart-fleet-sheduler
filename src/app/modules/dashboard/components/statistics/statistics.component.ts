@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../../../../global/card/card.component';
-import { ChartColumnIcon, LucideAngularModule } from 'lucide-angular';
+import {
+  CalendarIcon,
+  ChartColumnIcon,
+  LucideAngularModule,
+  RefreshCwIcon,
+  TrendingDownIcon,
+  TrendingUpIcon,
+  UsersIcon,
+} from 'lucide-angular';
 
 @Component({
   selector: 'app-statistics',
@@ -10,4 +18,11 @@ import { ChartColumnIcon, LucideAngularModule } from 'lucide-angular';
 })
 export class StatisticsComponent {
   protected readonly ChartColumnIcon = ChartColumnIcon;
+  protected readonly RefreshCwIcon = RefreshCwIcon;
+  protected readonly UsersIcon = UsersIcon;
+  protected readonly CalendarIcon = CalendarIcon;
+  protected readonly TrendingDownIcon = TrendingDownIcon;
+  protected readonly TrendingUpIcon = TrendingUpIcon;
+
+  protected readonly tradingUp: boolean = false;
 }
