@@ -1,3 +1,59 @@
 <div>
   <app-card-header title="Poprzednie grafiki" subTitle="Historia grafików pracy" />
+
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="filters-wrapper">
+        <button class="btn filter" (click)="openFilters()">
+          <lucide-icon [name]="FilterIcon" [size]="16" />
+          Filtruj
+        </button>
+        <button class="btn create">
+          <lucide-icon [name]="PlusIcon" [size]="16" />
+          Stwórz nowy grafik
+        </button>
+      </div>
+
+      @if (showFilters()) {
+        <div class="filters-container">
+          <span class="order">Lp.</span>
+          <span class="date-range">Okres</span>
+          <div class="status">
+            <select (change)="filterData($event)">
+              <option value="">Wszystkie</option>
+              <option value="Wersja robocza">Wersja robocza</option>
+              <option value="Opublikowany">Opublikowany</option>
+            </select>
+          </div>
+          <div class="changes">Zmiany</div>
+          <div class="distance">Dystans</div>
+          <div class="time">Czas</div>
+        </div>
+      }
+
+      <div class="results-wrapper">
+        @for (item of filteredData(); track item; let idx = $index) {
+          <div class="item-container">
+            <span class="order">{{ idx + 1 }}.</span>
+            <span class="date-range">12.01 - 18.01.2026</span>
+            <div class="status" [class]="{ 'published': item.status === 'Opublikowany' }">
+              {{ item.status }}
+            </div>
+            <div class="changes">
+              <lucide-icon [name]="CalendarDaysIcon" [size]="16" />
+              <span>32 zmian</span>
+            </div>
+            <div class="distance">
+              <lucide-icon [name]="RouteIcon" [size]="16" />
+              <span>92,5 km</span>
+            </div>
+            <div class="time">
+              <lucide-icon [name]="ClockIcon" [size]="16" />
+              <span>4h 20min</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
 </div>
